@@ -1,0 +1,8 @@
+*.pyc
+*.pdf
+*/__pycache__
+./log/*
+*.csv
+log*
+log/*
+output/*
