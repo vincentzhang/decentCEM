@@ -1,0 +1,13 @@
+{
+    "-o exp_cfg.exp_cfg.ninit_rollouts": 0,
+    "-o ctrl_cfg.cem_cfg.cem_type": "POPLINA-INIT",
+    "-o ctrl_cfg.cem_cfg.training_scheme": "BC-AE",
+    "-o ctrl_cfg.cem_cfg.test_policy": 1,
+    "-o ctrl_cfg.cem_cfg.test_policy_epochs": 5,
+    "-o ctrl_cfg.cem_cfg.eval_ctrl_type": "MPC",
+    "-o ctrl_cfg.cem_cfg.debug_optimizer": "False",
+    "-o ctrl_cfg.cem_cfg.eval_cem_policy": "False",
+    "-ca model-type": "PE",
+    "-ca prop-type": "E",
+    "-ca opt-type": "POPLIN-A-E"
+}

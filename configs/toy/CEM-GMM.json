@@ -1,0 +1,14 @@
+{
+    "alg": ["CEM-GMM"],
+    "max_iters": [100],
+    "popsize": [100, 200, 500, 1000],
+    "randomize_init_mean": [2],
+    "elites_ratio": [0.1],
+    "epsilon": [0.001],
+    "alpha": [0.1],
+    "seed": [1],
+    "episodes": [10],
+    "M": [3, 5, 8, 10],
+    "kappa": [0.25, 0.5],
+    "return_mode": ["s", "m"]
+}

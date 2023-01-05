@@ -1,0 +1,10 @@
+{
+    "-o exp_cfg.exp_cfg.ninit_rollouts": 0,
+    "-o ctrl_cfg.cem_cfg.cem_type": "DecentCEM",
+    "-o ctrl_cfg.cem_cfg.test_policy": 1,
+    "-o ctrl_cfg.cem_cfg.test_policy_epochs": 5,
+    "-o ctrl_cfg.cem_cfg.debug_optimizer": "False",
+    "-ca model-type": "PE",
+    "-ca prop-type": "E",
+    "-ca opt-type": "DecentCEM"
+}

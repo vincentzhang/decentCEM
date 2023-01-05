@@ -1,0 +1,12 @@
+{
+    "alg": ["CEM-E"],
+    "max_iters": [100],
+    "popsize": [100, 200, 500, 1000],
+    "ensemble_size": [3, 5, 8, 10],
+    "randomize_init_mean": [2],
+    "elites_ratio": [0.1],
+    "epsilon": [0.001],
+    "alpha": [0.1],
+    "seed": [1],
+    "episodes": [10]
+}
