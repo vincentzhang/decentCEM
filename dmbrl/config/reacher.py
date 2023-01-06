@@ -40,12 +40,6 @@ class ReacherConfigModule:
                 "max_iters": 5,
                 "alpha": 0.1
             },
-            "DecentCEM": {
-                "popsize": 80,
-                "num_elites": 8,
-                "max_iters": 5,
-                "alpha": 0.1
-            },
             "GBPRandom": {
                 "popsize": 2000
             },
@@ -67,15 +61,21 @@ class ReacherConfigModule:
                 "max_iters": 5,
                 "alpha": 0.1
             },
+            "DecentCEM": {
+                "popsize": 200,
+                "num_elites": 20,
+                "max_iters": 5,
+                "alpha": 0.1
+            },
             "POPLIN-A-E": {
-                "popsize": 80,
-                "num_elites": 8,
+                "popsize": 200,
+                "num_elites": 20,
                 "max_iters": 5,
                 "alpha": 0.1
             },
             "POPLIN-P-E": {
-                "popsize": 80,
-                "num_elites": 8,
+                "popsize": 200,
+                "num_elites": 20,
                 "max_iters": 5,
                 "alpha": 0.1
             }
