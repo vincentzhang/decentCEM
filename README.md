@@ -1,8 +1,12 @@
 # DecentCEM
 
-Official repository for the paper "A Simple Decentralized Cross-Entropy Method", Zichen Zhang and Jun Jin and Martin Jagersand and Jun Luo and Dale Schuurmans, NeurIPS 2022, [arXiv link](https://arxiv.org/abs/2212.08235)
+Official repository for the paper  
+"A Simple Decentralized Cross-Entropy Method"  
+Zichen Zhang and Jun Jin and Martin Jagersand and Jun Luo and Dale Schuurmans,  
+NeurIPS 2022, [arXiv Link](https://arxiv.org/abs/2212.08235)
 
 This repo supports tensorflow 1.14, 1.15, mujoco-py 1.50, python3+
+
 It supports both local mode and cluster mode (formerly Compute Canada, now Digital Research Alliance of Canada)
 
 ## Python env installation
@@ -16,7 +20,8 @@ $ pip install -r requirements.txt
 
 ### Cluster
 
-The following setup is for compute canada. But in principle, it can be adapted slightly to work for clusters managed by slurm.
+The following setup is for [compute canada](https://docs.alliancecan.ca/wiki/Getting_started). 
+But in principle, it can be adapted slightly to work for clusters managed by slurm.
 
 First load python module 
 ```
@@ -150,9 +155,8 @@ python run.py --job_name e5-all --script_path ./sbatch_param_search.sh --num_job
    -ca opt-type     : The optimizer that will be used to select action sequences.
            Select from [CEM, DecentCEM, POPLIN-A, POPLIN-P, POPLIN-A-E, POPLIN-P-E].
 
-    Please refer to the [PETS](https://github.com/kchua/handful-of-trials) repo for the full options for the arguments above. But note that only the values used above were tested in this project.
-
 ```
+Please refer to the [PETS](https://github.com/kchua/handful-of-trials) repo for the full options for the arguments above. But note that only the values used above were tested in this project.
 
 ### Ensemble Size
 
@@ -196,9 +200,11 @@ Run the following command from the root directory to plot the results of 1d toy 
 $ python utils/plotter.py
 ```
 For the plot for 1d toy example, it expected the results described in `batch_toy.sh`
+
 The results are stored in csv files. Refer to `utils/cem_opt_1d.py`.
 
 For the plot for mujoco learning curves, it expected the results of all algorithms. It can be produced by following the steps in [this section](#example-scripts---cluster)
+
 The results are stored in mat files. Refer to line 204 in the file `dmbrl/misc/MBExp.py`.
 
 ## Acknowledgments
@@ -206,35 +212,12 @@ The results are stored in mat files. Refer to line 204 in the file `dmbrl/misc/M
 This code base is built on top of the following repos:
 
 [PETS](https://github.com/kchua/handful-of-trials): PETS algorithm
+
 [POPLIN](https://github.com/WilsonWangTHU/POPLIN): POPLIN-A/P algorithms
+
 [mbbl](https://github.com/WilsonWangTHU/mbbl): gym environments for benchmarking mbrl
+
 [Explorer](https://github.com/qlan3/Explorer): scripts for [compute canada](https://docs.alliancecan.ca/wiki/Getting_started)
-
-
-## Troubleshoot
-
-### Tensorflow_gpu==1.15.0(or 1.14.1) does not install properly on the cluster
-
-as of Jan 4, 2023, tensorflow_gpu does not seem to install properly,
-where the following command complains about unresolved dependencies
-`$ pip install --no-index tensorflow_gpu==1.15.0`
-
-I suspect that it's due to updated packages in the cluster package repository.
-If you encounter this issue, the best solution is to report to the Compute Canada support team.
-
-### not able to install mujoco-py locally
-
-Reproduce:  
-
-``` pip install mujoco-py==1.50.1.68 ```
-
-Error message:  
-``` conflicting types for ‘PFNGLFRAGMENTLIGHTFVSGIXPROC’ ```
-
-Resolve the issue:
-
-comment out some lines in `/usr/include/GL/glext.h` following the steps here:
-https://github.com/openai/mujoco-py/issues/383#issuecomment-965154631
 
 
 ## Citation
@@ -251,3 +234,28 @@ year={2022},
 url={https://openreview.net/forum?id=IQIY2LASzYx}
 }
 ```
+
+## Troubleshoot
+
+### Tensorflow_gpu==1.15.0(or 1.14.1) does not install properly on the cluster
+
+as of Jan 4, 2023, tensorflow_gpu does not seem to install properly,
+where the following command complains about unresolved dependencies
+`$ pip install --no-index tensorflow_gpu==1.15.0`
+
+I suspect that it's due to updated packages in the cluster package repository.
+If you encounter this issue, the best solution is to report to the Compute Canada support team.
+
+### Not able to install mujoco-py locally
+
+Reproduce:  
+
+``` pip install mujoco-py==1.50.1.68 ```
+
+Error message:  
+``` conflicting types for ‘PFNGLFRAGMENTLIGHTFVSGIXPROC’ ```
+
+Resolve the issue:
+
+comment out some lines in `/usr/include/GL/glext.h` following the steps here:
+https://github.com/openai/mujoco-py/issues/383#issuecomment-965154631
