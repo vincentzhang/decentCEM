@@ -33,22 +33,16 @@ class PusherConfigModule:
             "Random": {
                 "popsize": 2500
             },
-            "CEM": {
+            "GBPRandom": {
+                "popsize": 2500
+            },
+            "GBPCEM": {
                 "popsize": 500,
                 "num_elites": 50,
                 "max_iters": 5,
                 "alpha": 0.1
             },
-            "DecentCEM": {
-                "popsize": 100,
-                "num_elites": 10,
-                "max_iters": 5,
-                "alpha": 0.1
-            },
-            "GBPRandom": {
-                "popsize": 2500
-            },
-            "GBPCEM": {
+            "CEM": {
                 "popsize": 500,
                 "num_elites": 50,
                 "max_iters": 5,
@@ -66,15 +60,21 @@ class PusherConfigModule:
                 "max_iters": 5,
                 "alpha": 0.1
             },
+            "DecentCEM": {
+                "popsize": 166,
+                "num_elites": 17,
+                "max_iters": 5,
+                "alpha": 0.1
+            },
             "POPLIN-A-E": {
-                "popsize": 100,
-                "num_elites": 10,
+                "popsize": 166,
+                "num_elites": 17,
                 "max_iters": 5,
                 "alpha": 0.1
             },
             "POPLIN-P-E": {
-                "popsize": 100,
-                "num_elites": 10,
+                "popsize": 166,
+                "num_elites": 17,
                 "max_iters": 5,
                 "alpha": 0.1
             }
