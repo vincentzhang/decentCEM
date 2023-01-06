@@ -1,5 +1,6 @@
 {
 "env": ["gym_hopper","gym_walker2d", "gym_fswimmer", "pusher", "gym_reacher", "gym_cheetah","gym_cartpole", "gym_invertedPendulum", "reacher", "gym_pendulum", "gym_acrobot", "gym_ant", "halfcheetah"],
 "alg": ["POPLINA", "POPLINP", "POPLINAE", "POPLINPE", "PETS", "DecentCEM"],
-"seed_train": [1,2,3,4,5]
+"seed_train": [1,2,3,4,5],
+"ensemble_size": [4]
 }
