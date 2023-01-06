@@ -49,12 +49,6 @@ class HopperConfigModule:
                 "max_iters": 5,
                 "alpha": 0.1
             },
-            "DecentCEM": {
-                "popsize": 100,
-                "num_elites": 10,
-                "max_iters": 5,
-                "alpha": 0.1
-            },
             "POPLIN-P": {
                 "popsize": 500,
                 "num_elites": 50,
@@ -67,19 +61,25 @@ class HopperConfigModule:
                 "max_iters": 5,
                 "alpha": 0.1
             },
+            "DecentCEM": {
+                "popsize": 84,
+                "num_elites": 9,
+                "max_iters": 5,
+                "alpha": 0.1
+            },
             "POPLIN-A-E": {
-                "popsize": 100,
-                "num_elites": 10,
+                "popsize": 84,
+                "num_elites": 9,
                 "max_iters": 5,
                 "alpha": 0.1
             },
             "POPLIN-P-E": {
-                "popsize": 100,
-                "num_elites": 10,
+                "popsize": 84,
+                "num_elites": 9,
                 "max_iters": 5,
                 "alpha": 0.1
             }
-}
+        }
 
     @staticmethod
     def obs_preproc(obs):
