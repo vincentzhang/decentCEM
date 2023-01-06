@@ -1,7 +1,9 @@
 # DecentCEM
 
-Official repository for the paper "A Simple Decentralized Cross-Entropy Method" [arXiv Link](https://arxiv.org/abs/2212.08235),  
-Zichen Zhang and Jun Jin and Martin Jagersand and Jun Luo and Dale Schuurmans, NeurIPS 2022
+Official repository for the paper  
+"A Simple Decentralized Cross-Entropy Method"  
+Zichen Zhang and Jun Jin and Martin Jagersand and Jun Luo and Dale Schuurmans,  
+NeurIPS 2022, [arXiv Link](https://arxiv.org/abs/2212.08235)
 
 This repo supports tensorflow 1.14, 1.15, mujoco-py 1.50, python3+
 
